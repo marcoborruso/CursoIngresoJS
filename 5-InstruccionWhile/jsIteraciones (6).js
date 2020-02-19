@@ -1,15 +1,14 @@
 function mostrar()
 {
 	var numero
-	var contador=0;
-	var acumulador=0;
+	var contador = 0;
+	var acumulador = 0;
 
-    
-while(contador < 5) {
+while(contador < 5)
+{
 	numero = parseInt(prompt("Ingrese un número"));
-	acumulador = acumulador + numero;
-	contador = contador + 1
-
+	acumulador = numero + acumulador;
+	contador++;
 }
 
 document.getElementById('suma').value=acumulador;

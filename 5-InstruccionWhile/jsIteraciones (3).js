@@ -1,20 +1,27 @@
 function mostrar() {
 
-    var clave
-    clave = prompt("Ingresar clave");
+    var pass
+    pass = prompt("Ingresar pass");
 
-    while (clave != "utn750") {
-        clave = prompt("Ingrese nuevamente")
+    while (!(pass == "utn750")) 
+    {
+        pass = prompt("Ingrese nuevamente")
         
-
-
-
     }
     alert("Bienvenido");
     
 
 
+/*    var pass
+    pass = prompt("Ingresar pass");
 
+    while (pass != "utn750") 
+    {
+        pass = prompt("Ingrese nuevamente")
+        
+    }
+    alert("Bienvenido");
+     */
 
 
 

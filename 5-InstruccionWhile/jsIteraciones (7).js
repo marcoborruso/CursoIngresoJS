@@ -7,7 +7,8 @@ function mostrar()
 
 
 
-	while(seguir == 'si'){
+	while(seguir == 'si')
+	{
 		numero = parseInt(prompt ("Ingrese un número"));
 
 		acumulador = acumulador + numero
