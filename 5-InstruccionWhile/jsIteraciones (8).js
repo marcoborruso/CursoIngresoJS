@@ -1,6 +1,6 @@
 function mostrar() {
 	var numero;
-	var contador = 0;
+	var flag = 0;
 	var positivo = 0;
 	var negativo = 1;
 	var respuesta = 'si';
@@ -8,31 +8,26 @@ function mostrar() {
 	do {
 		numero = parseInt(prompt("Ingrese un número"));
 		while (isNaN(numero)) {
-			alert("Esto no es un numero")
-			numero = parseInt(prompt("Ingrese un número"));
+			numero = parseInt(prompt("Eso no es un número. Ingrese un número: "));
 		}
-		if (numero > 0) {
-			positivo = positivo + numero;
+		if (numero >= 0) {
+			positivo += numero;
 		}
 		else {
-			negativo = negativo * numero
-			contador = contador + 1;
+			negativo *= numero;
+			flag = 1
 		}
 
-		respuesta = prompt("¿Quiere ingresar otro numero?")
+		respuesta = prompt("¿Quiere ingresar otro numero?").toLowerCase();
 
 
 	} while (respuesta == 'si');
 
-
-
-
-
+	if (flag == 0) {
+		negativo = 0
+	}
 
 	document.getElementById('suma').value = positivo;
-	if (contador == 0) {
-		contador = 0
-	}
 	document.getElementById('producto').value = negativo;
 
 }//FIN DE LA FUNCIÓN

@@ -1,20 +1,29 @@
 function mostrar() {
 
-	var contador = 0;
-	// declarar variables
+	//	var contador = 0;
+	var flag = 0;
 	var numero;
 	var maximo;
 	var minimo;
-	var respuesta = 'si';
+	var respuesta
 
-	while (respuesta == 'si') {
-		//pido un numero
+	do {
 		numero = parseInt(prompt("Ingresar un numero"));
-		respuesta = prompt("¿Quiere ingresar otro numero?");
-		if (contador == 0) {
+		while (isNaN(numero)) {
+			numero = parseInt(prompt("Eso no es un número. Ingrese un número: "));
+		}
+
+		if (flag == 0 || numero > maximo) {
+			maximo = numero;
+		}
+		if (flag == 0 || numero < minimo) {
+			minimo = numero;
+			flag = 1;
+		}
+		/*if (contador == 0) {
 			minimo = numero;
 			maximo = numero;
-	
+			contador++;	
 		}
 		else
 		{
@@ -24,17 +33,10 @@ function mostrar() {
 		
 			if (numero > maximo) {
 				maximo = numero;
-			}
-	
-	
-		}
-		contador++;
-	}
+			}*/
+		respuesta = prompt("¿Quiere ingresar otro numero?").toLowerCase();
+	} while (respuesta == 'si');
 
-	
-
-
-	//mostrar mediante ID
 	document.getElementById('maximo').value = maximo;
 	document.getElementById('minimo').value = minimo;
 
