@@ -2,11 +2,9 @@ function mostrar()
 {
     var contador;
 
-    console.info("inicio", contador);
-    
-    for (contador = 0 ; contador < 1 ; contador ++ )
+    for (contador = 0 ; contador < 10 ; contador ++ )
     {
-        console.info("in", contador)
+        document.write((contador) + "</br>");
     }
-    console.info("out", contador);
+    document.write(contador);
 }

@@ -16,7 +16,7 @@ function mostrar() {
 			acumNeg += numero;
 			contNeg++;
 		}
-		else if (numero >= 0) {
+		else if (numero > 0) {
 			acumPos += numero;
 			contPos++;
 		}
@@ -27,12 +27,13 @@ function mostrar() {
 		respuesta = prompt("¿Quiere ingresar otro numero?").toLowerCase();
 	} while (respuesta == 'si');
 
-	document.write("Suma de negativos: " + acumNeg + "</br>")
-	document.write("Suma de positivos: " + acumPos + "</br>")
-	document.write("Cantidad de positivos: " + contPos + "</br>")
-	document.write("Cantidad de negativos: " + contNeg + "</br>")
-	document.write("Cantidad de ceros: " + contCer + "</br>")
-	document.write("Promedio de negativos: " + acumNeg/contNeg + "</br>")
-	document.write("Promedio de positivos: " + acumPos/contPos + "</br>")
-	document.write("Diferencia entre Pos y neg: " + acumPos - acumNeg + "</br>")
+	document.write("Suma de negativos: " + acumNeg + "</br>");
+	document.write("Suma de positivos: " + acumPos + "</br>");
+	document.write("Cantidad de positivos: " + contPos + "</br>");
+	document.write("Cantidad de negativos: " + contNeg + "</br>");
+	document.write("Cantidad de ceros: " + contCer + "</br>");
+	document.write("Promedio de negativos: " + acumNeg/contNeg + "</br>");
+	document.write("Promedio de positivos: " + acumPos/contPos + "</br>");
+	document.write("Diferencia entre Pos y neg: " + (acumPos - acumNeg) + "</br>");
+	document.write("Suma de positivos y negativos : " + (acumPos + acumNeg) + "</br>");
 }//FIN DE LA FUNCIÓN
