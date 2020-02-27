@@ -1,6 +1,7 @@
 function mostrar() {
 	var contNeg = 0;
 	var contPos = 0;
+	var contPar = 0;
 	var numero;
 	var acumNeg = 0;
 	var acumPos = 0;
@@ -23,7 +24,9 @@ function mostrar() {
 		else {
 			contCer++;
 		}
-
+		if (numero % 2 == 0) {
+			contPar++;
+		}
 		respuesta = prompt("¿Quiere ingresar otro numero?").toLowerCase();
 	} while (respuesta == 'si');
 
@@ -35,5 +38,6 @@ function mostrar() {
 	document.write("Promedio de negativos: " + acumNeg/contNeg + "</br>");
 	document.write("Promedio de positivos: " + acumPos/contPos + "</br>");
 	document.write("Diferencia entre Pos y neg: " + (acumPos - acumNeg) + "</br>");
+	document.write("Cantidad de números pares: " + contPar + "</br>");
 	document.write("Suma de positivos y negativos : " + (acumPos + acumNeg) + "</br>");
 }//FIN DE LA FUNCIÓN

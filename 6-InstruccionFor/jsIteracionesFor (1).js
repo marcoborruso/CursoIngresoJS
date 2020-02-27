@@ -1,10 +1,7 @@
-function mostrar()
+function mostrar() 
 {
-    var contador;
-
-    for (contador = 0 ; contador < 10 ; contador ++ )
-    {
+    for (var contador = 1; contador <= 10; contador++) {
         document.write((contador) + "</br>");
     }
-    document.write(contador);
+
 }

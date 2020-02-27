@@ -1,10 +1,9 @@
-function mostrar()
+function mostrar() 
 {
 
-    for(var i = 0 ; i < 100 ; i++)
-    {
+    for (var i; i < 100; i++) {
         document.write(i + "<br>");
-        if(i == 9){
+        if (i == 9) {
             break;
         }
     }
