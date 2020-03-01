@@ -32,7 +32,7 @@ function mostrar()
            sexo = prompt("Error, ingrese su sexo nuevamente:").toUpperCase();
        }
        
-       nota = parseInt(prompt("Ingrese la nota entre 1 y 10:"))
+       nota = parseInt(prompt("Ingrese la nota entre 1 y 10:"));
        while (isNaN(nota) || nota > 10 || nota < 1){
            nota = parseInt(prompt("Eso no es una nota válida, ingrese la nota (1-10):"));
         }
